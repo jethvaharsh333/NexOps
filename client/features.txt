@@ -1,0 +1,33 @@
+--------------------- MUST -------------------------------
+1. Real-time Messaging
+2. Real-time Audio/Video Calling Extensions
+3. User Authentication & Profiles
+4. Individual & Group Chats
+5. Message Search & History
+6. File Sharing
+8. Live Reactions & Polling
+
+--------------------- CAN BE -------------------------------
+1. Location Sender
+2. Task Management
+3. Finance payment
+4. Customization & Personalization Dashboard
+5. Self-Destructing Messages
+6. Fake Chat Mode – Open a secret chat that looks like a calculator app.
+
+
+--------------------- CREATIVE -------------------------------
+Problem 1: "I can’t find that old photo/link someone sent!"
+Solution: Smart Media Search – Search chats by keyword ("blue shirt pic") or date.
+
+Problem 2: "Scheduled Messages"
+
+Problem 3: "I hate typing long messages!"
+Solution" "Voice-to-Text with Editing" – Speak a message, edit before sending.
+
+Problem 4: "I sent a message to the wrong group/person!"
+Solution: "Send Delay" (Optional 3-sec timer before sending to prevent mistakes).
+
+--------------------- LATER -------------------------------
+1. Disappearing Stories
+2. Chat Summary of Group

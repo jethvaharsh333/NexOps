@@ -1,0 +1,128 @@
+Here are the files in the order of the lifecycle:
+
+-------------------------------------------------
+
+1. App.js (Constructor)
+JavaScript
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
+import Todos from './Todos';
+
+ReactDOM.render(
+  <Provider store={store}>
+    <Todos />
+  </Provider>,
+  document.getElementById('root')
+);
+
+-------------------------------------------------
+
+2. Todos.js (ComponentWillMount, Render)
+JavaScript
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getTodos } from './actions';
+
+function Todos() {
+  const todos = useSelector((state) => state.todos);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getTodos());
+  }, [dispatch]);
+
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo.id}>{todo.title}</li>
+      ))}
+    </ul>
+  );
+}
+
+export default Todos;
+
+-------------------------------------------------
+
+3. actions.js (useEffect, getTodos action)
+JavaScript
+import axios from 'axios';
+
+export const GET_TODOS_REQUEST = 'GET_TODOS_REQUEST';
+export const GET_TODOS_SUCCESS = 'GET_TODOS_SUCCESS';
+export const GET_TODOS_ERROR = 'GET_TODOS_ERROR';
+
+export function getTodos() {
+  return (dispatch) => {
+    dispatch({ type: GET_TODOS_REQUEST });
+    axios.get('/api/todos')
+      .then((response) => {
+        dispatch({ type: GET_TODOS_SUCCESS, todos: response.data });
+      })
+      .catch((error) => {
+        dispatch({ type: GET_TODOS_ERROR, error });
+      });
+  };
+}
+
+-------------------------------------------------
+
+4. reducer.js (GET_TODOS_SUCCESS, update state)
+JavaScript
+const initialState = {
+  todos: [],
+  loading: false,
+  error: null,
+};
+
+function reducer(state = initialState, action) {
+  switch (action.type) {
+    case 'GET_TODOS_REQUEST':
+      return { ...state, loading: true };
+    case 'GET_TODOS_SUCCESS':
+      return { ...state, loading: false, todos: action.todos };
+    case 'GET_TODOS_ERROR':
+      return { ...state, loading: false, error: action.error };
+    default:
+      return state;
+  }
+}
+
+export default reducer;
+
+-------------------------------------------------
+
+5. store.js (update store)
+JavaScript
+import { createStore } from 'redux';
+import reducer from './reducer';
+
+const store = createStore(reducer);
+
+export default store;
+6. Todos.js (ComponentWillReceiveProps, ShouldComponentUpdate, Render)
+JavaScript
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getTodos } from './actions';
+
+function Todos() {
+  const todos = useSelector((state) => state.todos);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getTodos());
+  }, [dispatch]);
+
+  return (
+    <ul>
+      {todos.map((todo) => (
+        <li key={todo.id}>{todo.title}</li>
+      ))}
+    </ul>
+  );
+}
+
+export default Todos;
