@@ -1,9 +1,77 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.inter-myfonts {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 20; */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: jaguar-jugglers;
+  src: url(../src/assets/font/jaguar-jugglers.ttf);
+}
+
+@font-face {
+  font-family: fido;
+  src: url(../src/assets/font/fido.ttf);
+}
+
+@font-face {
+  font-family: fido-regular;
+  src: url(../src/assets/font/fido-regular.ttf);
+}
+
+@font-face {
+  font-family: midsole;
+  src: url(../src/assets/font/Sernes-Light.otf);
+}
+
+@font-face {
+  font-family: bebas-neue;
+  src: url(../src/assets/font/BebasNeue-Regular.ttf);
+}
+
+.jaguar-jugglers {
+  font-family: jaguar-jugglers;
+}
+
+.midsole{
+  font-family: midsole;
+}
+
+.bebas-neue{
+  font-family: bebas-neue;
+}
+
+.fido {
+  font-family: fido;
+}
+
+.fido-regular {
+  font-family: fido-regular;
+}
+
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* font-family: "Outfit", serif; */
+
+  font-family: inter-myfonts, "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

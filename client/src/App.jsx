@@ -1,11 +1,11 @@
 import AppRoutes from "./routes/index";
-import './index.css'
+import './index.css';
 
 function App() {
   return (
-    <>
+    <div className="h-full">
       <AppRoutes/>
-    </>
+    </div>
   )
 }
 

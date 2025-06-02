@@ -5,7 +5,7 @@ import cookieParser from "cookie-parser";
 const app = express();
 
 app.use(cors({              // Enables CORS
-    origin: process.env.CORS_ORIGIN,
+    origin: process.env.FRONTEND_URL,
     credentials: true
 }))
 
@@ -23,6 +23,11 @@ app.use(express.static("public"))   // Serves static files like images, CSS, JS 
 app.use(cookieParser())     // Allows reading and writing cookies on the server via req.cookies
 
 
+import authRoutes from "./routes/auth.routes.js";
+app.use("/api/v1/auth", authRoutes);
+
+import { errorHandler } from "./middleware/errorHandler.js";
+app.use(errorHandler);
 
 
 export {app};

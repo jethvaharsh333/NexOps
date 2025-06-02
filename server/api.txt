@@ -1,0 +1,88 @@
+
+-----------------------------------------------------------------------------
+
+
+REQUEST: 
+http://localhost:8000/api/v1/user/verify-by-email
+POST
+data: {
+    "userName": "harsh123",
+    "email": "jethvaharsh333@gmail.com",
+    "password": "12345467"
+}
+
+OUTPUT:
+Successfully send email. [SEND EMAIL]
+
+-------------------------------------------------------------------------------
+
+REQUEST:
+http://localhost:8000/api/v1/user/register
+POST
+{
+    "userName": "harsh123",
+    "email": "jethvaharsh333@gmail.com",
+    "password": "12345467",
+    "code": "155361"
+}
+
+SUCCESS:
+{
+    "statusCode": 200,
+    "data": {
+        "_id": "680792e0ab328b8f69b25d5e",
+        "userName": "harsh123",
+        "email": "jethvaharsh333@gmail.com",
+        "createdAt": "2025-04-22T13:00:16.320Z",
+        "updatedAt": "2025-04-22T13:00:16.320Z",
+        "__v": 0
+    },
+    "message": "User registered Successfully",
+    "success": true
+}
+
+---------------------------------------------------------------------------------------
+
+REQUEST:
+http://localhost:8000/api/v1/user/login
+POST
+{
+    "identifier": "jethvaharsh333@gmail.com", // email or userName
+    "password": "123456"
+}
+
+SUCCESS:
+{
+    "statusCode": 200,
+    "data": {
+        "user": {
+            "_id": "68087153a484b64bffa8e7d2",
+            "userName": "harsh@123",
+            "email": "jethvaharsh333@gmail.com",
+            "createdAt": "2025-04-23T04:49:23.792Z",
+            "updatedAt": "2025-04-23T05:07:32.759Z",
+            "__v": 0
+        },
+        "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODA4NzE1M2E0ODRiNjRiZmZhOGU3ZDIiLCJlbWFpbCI6ImpldGh2YWhhcnNoMzMzQGdtYWlsLmNvbSIsInVzZXJOYW1lIjoiaGFyc2hAMTIzIiwiaWF0IjoxNzQ1Mzg0ODUyLCJleHAiOjE3NDU0NzEyNTJ9.xiArQbOSJ3luhTqVqVz1p3U6WlYyr4-XcgKSGCmAxEs",
+        "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODA4NzE1M2E0ODRiNjRiZmZhOGU3ZDIiLCJpYXQiOjE3NDUzODQ4NTIsImV4cCI6MTc0NjI0ODg1Mn0.wlZtEcNsT0rckfmL3_97Vtp9KuCXz8S1x9e0vL1kqMM"
+    },
+    "message": "User logged In Successfully",
+    "success": true
+}
+
+-----------------------------------------------------------------------------
+
+REQUEST:
+PATCH
+http://localhost:8000/api/v1/user/update
+{
+    "name": "Harsh"
+}
+
+SUCCESS: 
+{
+    "statusCode": 200,
+    "data": "User updated successfully",
+    "message": "Success",
+    "success": true
+}

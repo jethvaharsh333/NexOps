@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="160" viewBox="0 0 600 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="speedGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Speed dashes -->
+    <g id="speedDashes">
+      <path d="M10 130 L50 110" stroke="url(#speedGradient)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M30 140 L80 110" stroke="url(#speedGradient)" stroke-width="4" stroke-linecap="round"/>
+      <path d="M50 150 L110 110" stroke="url(#speedGradient)" stroke-width="4" stroke-linecap="round"/>
+    </g>
+  </defs>
+
+  <!-- Speed dashes placement -->
+  <use href="#speedDashes" transform="translate(0 0)"/>
+
+  <!-- Main logo text -->
+  <text x="0" y="100" font-family="'Inter', sans-serif" font-size="72" fill="#1f2937">
+    <tspan font-weight="800" fill="url(#speedGradient)">Nex</tspan>
+    <tspan font-weight="500">Sprint</tspan>
+  </text>
+
+  <!-- Optional speed effect -->
+  <use href="#speedDashes" transform="translate(220 5) scale(0.8)" opacity="0.8"/>
+</svg>

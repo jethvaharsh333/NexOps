@@ -1,3 +1,10 @@
+https://bansalsurya.github.io/pencilpal/
+https://github.com/bansalsurya/whiteboard-app/tree/master
+https://bansalsurya.medium.com/making-a-whiteboard-application-with-reactjs-862b9f320850
+https://chatgpt.com/share/680521fd-ffc4-8002-a459-ed7413b6775a
+
+---------------------------------------------------------------------------------------
+
 Here are the files in the order of the lifecycle:
 
 -------------------------------------------------

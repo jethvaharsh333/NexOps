@@ -15,7 +15,6 @@
 5. Self-Destructing Messages
 6. Fake Chat Mode – Open a secret chat that looks like a calculator app.
 
-
 --------------------- CREATIVE -------------------------------
 Problem 1: "I can’t find that old photo/link someone sent!"
 Solution: Smart Media Search – Search chats by keyword ("blue shirt pic") or date.

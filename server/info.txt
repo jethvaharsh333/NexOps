@@ -1,0 +1,15 @@
+Role	        ||  Workspace Access	    ||  Project Access	                ||  Task Access
+---------------------------------------------------------------------------------------------------------------------
+Administrator	||  Full control	        ||  Full control	                ||  Full control
+Project Manager	||  Associated workspaces	||  Budget-limited deletion	        ||  Team assignment
+Team Lead	    ||  N/A	                    ||  Department-specific editing	    ||  Department task management
+Developer	    ||  N/A	                    ||  N/A	                            ||  Own task management
+QA Specialist	||  N/A	                    ||  QA team tasks	                ||  Status-based editing
+Client	        ||  N/A	                    ||  View active projects	        ||  View completed tasks
+Vendor	        ||  N/A	                    ||  Contract-bound access	        ||  Tag-based task viewing
+Stakeholder	    ||  High-clearance projects	||  Sensitive data viewing	        ||  N/A
+Intern	        ||  N/A	                    ||  Approved tasks only	            ||  Todo task editing
+Guest	        ||  Public workspaces	    ||  N/A	                            ||  N/A
+
+https://gemini.google.com/app/69513b5370e60a47?hl=en-IN
+https://chatgpt.com/c/6831a8e5-a08c-8008-8c78-a9f8d0f15c4b
